@@ -433,7 +433,7 @@ local script = G2L["15"];
 		if status.Value == false then
 			
 			status.Value = true
-			hum.WalkSpeed = 45
+			hum.WalkSpeed = 32
 			button.BackgroundColor3 = config.Colors.On
 			button.State.Text = "On"
 			
