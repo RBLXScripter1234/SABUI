@@ -23,7 +23,7 @@ G2L["2"]["Name"] = [[Config]];
 
 -- StarterGui.SABScript.GUI
 G2L["3"] = Instance.new("Frame", G2L["1"]);
-G2L["3"]["Visible"] = false;
+G2L["3"]["Visible"] = true;
 G2L["3"]["Active"] = true;
 G2L["3"]["BorderSizePixel"] = 0;
 G2L["3"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
