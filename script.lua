@@ -1,310 +1,414 @@
--- Gui to Lua
--- Version: 3.2
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
 
--- Instances:
+-- Instances: 38 | Scripts: 4 | Modules: 1 | Tags: 0
+local G2L = {};
 
-local SABScript = Instance.new("ScreenGui")
-local OldUpdate = Instance.new("Folder")
-local GUI = Instance.new("Frame")
-local Close = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local X = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local Title = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
-local StealABrainrotScriptBAD = Instance.new("TextLabel")
-local LocalPlayer = Instance.new("Frame")
-local SpeedBoost = Instance.new("Frame")
-local UICorner_4 = Instance.new("UICorner")
-local Title_2 = Instance.new("Frame")
-local SpeedBoost_2 = Instance.new("TextLabel")
-local Switch = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local State = Instance.new("TextLabel")
-local Home = Instance.new("Frame")
-local Descriptions = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
-local MadebyMegaPuppyDoctor = Instance.new("TextLabel")
-local Thisisstillaworkinprogress = Instance.new("TextLabel")
-local TableOfContents = Instance.new("Frame")
-local LocalPlayer_2 = Instance.new("TextButton")
-local UICorner_7 = Instance.new("UICorner")
-local LocalPlayer_3 = Instance.new("TextLabel")
-local Home_2 = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
-local Home_3 = Instance.new("TextLabel")
+-- StarterGui.SABScript
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[SABScript]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
---Properties:
 
-SABScript.Name = "SABScript"
-SABScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-SABScript.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+-- StarterGui.SABScript.Config
+G2L["2"] = Instance.new("ModuleScript", G2L["1"]);
+G2L["2"]["Name"] = [[Config]];
 
-OldUpdate.Name = "OldUpdate"
-OldUpdate.Parent = SABScript
 
-GUI.Name = "GUI"
-GUI.Parent = SABScript
-GUI.Active = true
-GUI.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
-GUI.BorderSizePixel = 0
-GUI.ClipsDescendants = true
-GUI.Position = UDim2.new(0, 24, 0, 26)
-GUI.Size = UDim2.new(0, 739, 0, 448)
+-- StarterGui.SABScript.OldUpdate
+G2L["3"] = Instance.new("Folder", G2L["1"]);
+G2L["3"]["Name"] = [[OldUpdate]];
 
-Close.Name = "Close"
-Close.Parent = GUI
-Close.Active = true
-Close.BackgroundColor3 = Color3.fromRGB(153, 22, 22)
-Close.BorderSizePixel = 0
-Close.ClipsDescendants = true
-Close.Position = UDim2.new(0.879570007, 0, 0.03125, 0)
-Close.Size = UDim2.new(0.0378899984, 0, 0.0580400005, 0)
 
-UICorner.CornerRadius = UDim.new(0, 100)
-UICorner.Parent = Close
+-- StarterGui.SABScript.GUI
+G2L["4"] = Instance.new("Frame", G2L["1"]);
+G2L["4"]["Active"] = true;
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
+G2L["4"]["ClipsDescendants"] = true;
+G2L["4"]["Size"] = UDim2.new(0, 739, 0, 448);
+G2L["4"]["Position"] = UDim2.new(0, 24, 0, 26);
+G2L["4"]["Name"] = [[GUI]];
 
-X.Name = "X"
-X.Parent = Close
-X.BackgroundTransparency = 1.000
-X.BorderSizePixel = 0
-X.Position = UDim2.new(0.321429998, 0, 0.192310005, 0)
-X.Selectable = false
-X.Size = UDim2.new(0.357140005, 0, 0.576919973, 0)
-X.Font = Enum.Font.Unknown
-X.Text = "X"
-X.TextColor3 = Color3.fromRGB(255, 255, 255)
-X.TextSize = 15.000
-X.TextWrapped = true
-X.TextXAlignment = Enum.TextXAlignment.Left
-X.TextYAlignment = Enum.TextYAlignment.Top
 
-UICorner_2.CornerRadius = UDim.new(0, 50)
-UICorner_2.Parent = GUI
+-- StarterGui.SABScript.GUI.Close
+G2L["5"] = Instance.new("Frame", G2L["4"]);
+G2L["5"]["Active"] = true;
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(154, 23, 23);
+G2L["5"]["ClipsDescendants"] = true;
+G2L["5"]["Size"] = UDim2.new(0.03789, 0, 0.05804, 0);
+G2L["5"]["Position"] = UDim2.new(0.87957, 0, 0.03125, 0);
+G2L["5"]["Name"] = [[Close]];
 
-Title.Name = "Title"
-Title.Parent = GUI
-Title.Active = true
-Title.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
-Title.BorderSizePixel = 0
-Title.ClipsDescendants = true
-Title.Position = UDim2.new(-0.0297699999, 0, 0, 0)
-Title.Size = UDim2.new(1.08525002, 0, 0.140630007, 0)
 
-UICorner_3.CornerRadius = UDim.new(0, 50)
-UICorner_3.Parent = Title
+-- StarterGui.SABScript.GUI.Close.UICorner
+G2L["6"] = Instance.new("UICorner", G2L["5"]);
+G2L["6"]["CornerRadius"] = UDim.new(0, 100);
 
-StealABrainrotScriptBAD.Name = "Steal A Brainrot Script(BAD)"
-StealABrainrotScriptBAD.Parent = Title
-StealABrainrotScriptBAD.Active = true
-StealABrainrotScriptBAD.BackgroundTransparency = 1.000
-StealABrainrotScriptBAD.BorderSizePixel = 0
-StealABrainrotScriptBAD.Position = UDim2.new(0.290520012, 0, 0.317460001, 0)
-StealABrainrotScriptBAD.Size = UDim2.new(0.417710006, 0, 0.380950004, 0)
-StealABrainrotScriptBAD.Font = Enum.Font.Unknown
-StealABrainrotScriptBAD.Text = "Steal A Brainrot Script(BAD)"
-StealABrainrotScriptBAD.TextColor3 = Color3.fromRGB(255, 255, 255)
-StealABrainrotScriptBAD.TextSize = 25.000
-StealABrainrotScriptBAD.TextWrapped = true
-StealABrainrotScriptBAD.TextXAlignment = Enum.TextXAlignment.Left
-StealABrainrotScriptBAD.TextYAlignment = Enum.TextYAlignment.Top
 
-LocalPlayer.Name = "Local Player"
-LocalPlayer.Parent = GUI
-LocalPlayer.Active = true
-LocalPlayer.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
-LocalPlayer.BorderSizePixel = 0
-LocalPlayer.ClipsDescendants = true
-LocalPlayer.Position = UDim2.new(0.213799998, 0, 0.140630007, 0)
-LocalPlayer.Size = UDim2.new(0.786199987, 0, 0.859380007, 0)
-LocalPlayer.Visible = false
+-- StarterGui.SABScript.GUI.Close.X
+G2L["7"] = Instance.new("TextButton", G2L["5"]);
+G2L["7"]["TextWrapped"] = true;
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["7"]["TextSize"] = 15;
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/JejuHallasan.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["Selectable"] = false;
+G2L["7"]["BackgroundTransparency"] = 1;
+G2L["7"]["Size"] = UDim2.new(0.35714, 0, 0.57692, 0);
+G2L["7"]["Text"] = [[X]];
+G2L["7"]["Name"] = [[X]];
+G2L["7"]["Position"] = UDim2.new(0.32143, 0, 0.19231, 0);
 
-SpeedBoost.Name = "Speed Boost"
-SpeedBoost.Parent = LocalPlayer
-SpeedBoost.Active = true
-SpeedBoost.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
-SpeedBoost.BorderSizePixel = 0
-SpeedBoost.ClipsDescendants = true
-SpeedBoost.Position = UDim2.new(0.0172099993, 0, 0.0363599993, 0)
-SpeedBoost.Size = UDim2.new(0.967299998, 0, 0.150649995, 0)
 
-UICorner_4.CornerRadius = UDim.new(0, 25)
-UICorner_4.Parent = SpeedBoost
+-- StarterGui.SABScript.GUI.Close.X.Close
+G2L["8"] = Instance.new("LocalScript", G2L["7"]);
+G2L["8"]["Name"] = [[Close]];
 
-Title_2.Name = "Title"
-Title_2.Parent = SpeedBoost
-Title_2.Active = true
-Title_2.BackgroundTransparency = 1.000
-Title_2.BorderSizePixel = 0
-Title_2.ClipsDescendants = true
-Title_2.Size = UDim2.new(0.384339988, 0, 1, 0)
 
-SpeedBoost_2.Name = "Speed Boost"
-SpeedBoost_2.Parent = Title_2
-SpeedBoost_2.Active = true
-SpeedBoost_2.BackgroundTransparency = 1.000
-SpeedBoost_2.BorderSizePixel = 0
-SpeedBoost_2.Position = UDim2.new(0.175929993, 0, 0.293099999, 0)
-SpeedBoost_2.Size = UDim2.new(0.643519998, 0, 0.413789988, 0)
-SpeedBoost_2.Font = Enum.Font.Unknown
-SpeedBoost_2.Text = "Speed Boost"
-SpeedBoost_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-SpeedBoost_2.TextSize = 25.000
-SpeedBoost_2.TextWrapped = true
-SpeedBoost_2.TextXAlignment = Enum.TextXAlignment.Left
-SpeedBoost_2.TextYAlignment = Enum.TextYAlignment.Top
+-- StarterGui.SABScript.GUI.UICorner
+G2L["9"] = Instance.new("UICorner", G2L["4"]);
+G2L["9"]["CornerRadius"] = UDim.new(0, 50);
 
-Switch.Name = "Switch"
-Switch.Parent = SpeedBoost
-Switch.BackgroundColor3 = Color3.fromRGB(156, 33, 33)
-Switch.BorderSizePixel = 0
-Switch.ClipsDescendants = true
-Switch.Position = UDim2.new(0.629890025, 0, 0.189659998, 0)
-Switch.Selectable = false
-Switch.Size = UDim2.new(0.320279986, 0, 0.60345, 0)
-Switch.Text = ""
 
-UICorner_5.CornerRadius = UDim.new(0, 25)
-UICorner_5.Parent = Switch
+-- StarterGui.SABScript.GUI.Title
+G2L["a"] = Instance.new("Frame", G2L["4"]);
+G2L["a"]["Active"] = true;
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["a"]["ClipsDescendants"] = true;
+G2L["a"]["Size"] = UDim2.new(1.08525, 0, 0.14063, 0);
+G2L["a"]["Position"] = UDim2.new(-0.02977, 0, 0, 0);
+G2L["a"]["Name"] = [[Title]];
 
-State.Name = "State"
-State.Parent = Switch
-State.Active = true
-State.BackgroundTransparency = 1.000
-State.BorderSizePixel = 0
-State.Position = UDim2.new(0.472224623, 0, 0.171430275, 0)
-State.Size = UDim2.new(0.166661739, 0, 0.828547835, 0)
-State.Font = Enum.Font.Unknown
-State.Text = "Off"
-State.TextColor3 = Color3.fromRGB(255, 255, 255)
-State.TextSize = 25.000
-State.TextWrapped = true
-State.TextXAlignment = Enum.TextXAlignment.Left
-State.TextYAlignment = Enum.TextYAlignment.Top
 
-Home.Name = "Home"
-Home.Parent = GUI
-Home.Active = true
-Home.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
-Home.BorderSizePixel = 0
-Home.ClipsDescendants = true
-Home.Position = UDim2.new(0.213799998, 0, 0.140630007, 0)
-Home.Size = UDim2.new(0.786199987, 0, 0.859380007, 0)
+-- StarterGui.SABScript.GUI.Title.UICorner
+G2L["b"] = Instance.new("UICorner", G2L["a"]);
+G2L["b"]["CornerRadius"] = UDim.new(0, 50);
 
-Descriptions.Name = "Descriptions"
-Descriptions.Parent = Home
-Descriptions.Active = true
-Descriptions.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
-Descriptions.BorderSizePixel = 0
-Descriptions.ClipsDescendants = true
-Descriptions.Position = UDim2.new(0.0172099993, 0, 0.0363599993, 0)
-Descriptions.Size = UDim2.new(0.967299998, 0, 0.916880012, 0)
 
-UICorner_6.CornerRadius = UDim.new(0, 25)
-UICorner_6.Parent = Descriptions
+-- StarterGui.SABScript.GUI.Title.Steal A Brainrot Script(BAD)
+G2L["c"] = Instance.new("TextLabel", G2L["a"]);
+G2L["c"]["TextWrapped"] = true;
+G2L["c"]["Active"] = true;
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["TextSize"] = 25;
+G2L["c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["c"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/JejuHallasan.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["BackgroundTransparency"] = 1;
+G2L["c"]["Size"] = UDim2.new(0.41771, 0, 0.38095, 0);
+G2L["c"]["Text"] = [[Steal A Brainrot Script(BAD)]];
+G2L["c"]["Name"] = [[Steal A Brainrot Script(BAD)]];
+G2L["c"]["Position"] = UDim2.new(0.29052, 0, 0.31746, 0);
 
-MadebyMegaPuppyDoctor.Name = "Made by MegaPuppyDoctor"
-MadebyMegaPuppyDoctor.Parent = Descriptions
-MadebyMegaPuppyDoctor.Active = true
-MadebyMegaPuppyDoctor.BackgroundTransparency = 1.000
-MadebyMegaPuppyDoctor.BorderSizePixel = 0
-MadebyMegaPuppyDoctor.Position = UDim2.new(0.0533800013, 0, 0.0821499974, 0)
-MadebyMegaPuppyDoctor.Size = UDim2.new(0.553380013, 0, 0.0679899976, 0)
-MadebyMegaPuppyDoctor.Font = Enum.Font.Unknown
-MadebyMegaPuppyDoctor.Text = "Made by MegaPuppyDoctor"
-MadebyMegaPuppyDoctor.TextColor3 = Color3.fromRGB(255, 255, 255)
-MadebyMegaPuppyDoctor.TextSize = 25.000
-MadebyMegaPuppyDoctor.TextWrapped = true
-MadebyMegaPuppyDoctor.TextXAlignment = Enum.TextXAlignment.Left
-MadebyMegaPuppyDoctor.TextYAlignment = Enum.TextYAlignment.Top
 
-Thisisstillaworkinprogress.Name = "This is still a work in progress."
-Thisisstillaworkinprogress.Parent = Descriptions
-Thisisstillaworkinprogress.Active = true
-Thisisstillaworkinprogress.BackgroundTransparency = 1.000
-Thisisstillaworkinprogress.BorderSizePixel = 0
-Thisisstillaworkinprogress.Position = UDim2.new(0.0533800013, 0, 0.184139997, 0)
-Thisisstillaworkinprogress.Size = UDim2.new(0.638790011, 0, 0.0679899976, 0)
-Thisisstillaworkinprogress.Font = Enum.Font.Unknown
-Thisisstillaworkinprogress.Text = "This is still a work in progress."
-Thisisstillaworkinprogress.TextColor3 = Color3.fromRGB(255, 255, 255)
-Thisisstillaworkinprogress.TextSize = 25.000
-Thisisstillaworkinprogress.TextWrapped = true
-Thisisstillaworkinprogress.TextXAlignment = Enum.TextXAlignment.Left
-Thisisstillaworkinprogress.TextYAlignment = Enum.TextYAlignment.Top
+-- StarterGui.SABScript.GUI.Local Player
+G2L["d"] = Instance.new("Frame", G2L["4"]);
+G2L["d"]["Visible"] = false;
+G2L["d"]["Active"] = true;
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
+G2L["d"]["ClipsDescendants"] = true;
+G2L["d"]["Size"] = UDim2.new(0.7862, 0, 0.85938, 0);
+G2L["d"]["Position"] = UDim2.new(0.2138, 0, 0.14063, 0);
+G2L["d"]["Name"] = [[Local Player]];
 
-TableOfContents.Name = "TableOfContents"
-TableOfContents.Parent = GUI
-TableOfContents.Active = true
-TableOfContents.BackgroundColor3 = Color3.fromRGB(41, 36, 36)
-TableOfContents.BackgroundTransparency = 0.267
-TableOfContents.BorderSizePixel = 0
-TableOfContents.ClipsDescendants = true
-TableOfContents.Position = UDim2.new(0, 0, 0.140630007, 0)
-TableOfContents.Selectable = true
-TableOfContents.Size = UDim2.new(0.213799998, 0, 0.859380007, 0)
 
-LocalPlayer_2.Name = "Local Player"
-LocalPlayer_2.Parent = TableOfContents
-LocalPlayer_2.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
-LocalPlayer_2.BorderSizePixel = 0
-LocalPlayer_2.ClipsDescendants = true
-LocalPlayer_2.Position = UDim2.new(0.0253199991, 0, 0.155839995, 0)
-LocalPlayer_2.Selectable = false
-LocalPlayer_2.Size = UDim2.new(0.949370027, 0, 0.101300001, 0)
-LocalPlayer_2.Text = ""
+-- StarterGui.SABScript.GUI.Local Player.Speed Boost
+G2L["e"] = Instance.new("Frame", G2L["d"]);
+G2L["e"]["Active"] = true;
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["e"]["ClipsDescendants"] = true;
+G2L["e"]["Size"] = UDim2.new(0.9673, 0, 0.15065, 0);
+G2L["e"]["Position"] = UDim2.new(0.01721, 0, 0.03636, 0);
+G2L["e"]["Name"] = [[Speed Boost]];
 
-UICorner_7.CornerRadius = UDim.new(0, 25)
-UICorner_7.Parent = LocalPlayer_2
 
-LocalPlayer_3.Name = "LocalPlayer"
-LocalPlayer_3.Parent = LocalPlayer_2
-LocalPlayer_3.Active = true
-LocalPlayer_3.BackgroundTransparency = 1.000
-LocalPlayer_3.BorderSizePixel = 0
-LocalPlayer_3.Position = UDim2.new(0.180000007, 0, 0.307689995, 0)
-LocalPlayer_3.Size = UDim2.new(0.633329988, 0, 0.410259992, 0)
-LocalPlayer_3.Font = Enum.Font.Unknown
-LocalPlayer_3.Text = "Local Player"
-LocalPlayer_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-LocalPlayer_3.TextSize = 16.000
-LocalPlayer_3.TextWrapped = true
-LocalPlayer_3.TextXAlignment = Enum.TextXAlignment.Left
-LocalPlayer_3.TextYAlignment = Enum.TextYAlignment.Top
+-- StarterGui.SABScript.GUI.Local Player.Speed Boost.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["e"]);
+G2L["f"]["CornerRadius"] = UDim.new(0, 25);
 
-Home_2.Name = "Home"
-Home_2.Parent = TableOfContents
-Home_2.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
-Home_2.BorderSizePixel = 0
-Home_2.ClipsDescendants = true
-Home_2.Position = UDim2.new(0, 0, 0.0259700008, 0)
-Home_2.Selectable = false
-Home_2.Size = UDim2.new(0.949370027, 0, 0.101300001, 0)
-Home_2.Text = ""
 
-UICorner_8.CornerRadius = UDim.new(0, 25)
-UICorner_8.Parent = Home_2
+-- StarterGui.SABScript.GUI.Local Player.Speed Boost.Title
+G2L["10"] = Instance.new("Frame", G2L["e"]);
+G2L["10"]["Active"] = true;
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["ClipsDescendants"] = true;
+G2L["10"]["Size"] = UDim2.new(0.38434, 0, 1, 0);
+G2L["10"]["Name"] = [[Title]];
+G2L["10"]["BackgroundTransparency"] = 1;
 
-Home_3.Name = "Home"
-Home_3.Parent = Home_2
-Home_3.Active = true
-Home_3.BackgroundTransparency = 1.000
-Home_3.BorderSizePixel = 0
-Home_3.Position = UDim2.new(0.346670002, 0, 0.307689995, 0)
-Home_3.Size = UDim2.new(0.300000012, 0, 0.410259992, 0)
-Home_3.Font = Enum.Font.Unknown
-Home_3.Text = "Home"
-Home_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Home_3.TextSize = 16.000
-Home_3.TextWrapped = true
-Home_3.TextXAlignment = Enum.TextXAlignment.Left
-Home_3.TextYAlignment = Enum.TextYAlignment.Top
 
--- Scripts:
+-- StarterGui.SABScript.GUI.Local Player.Speed Boost.Title.Speed Boost
+G2L["11"] = Instance.new("TextLabel", G2L["10"]);
+G2L["11"]["TextWrapped"] = true;
+G2L["11"]["Active"] = true;
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["TextSize"] = 25;
+G2L["11"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["11"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/JejuHallasan.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["BackgroundTransparency"] = 1;
+G2L["11"]["Size"] = UDim2.new(0.64352, 0, 0.41379, 0);
+G2L["11"]["Text"] = [[Speed Boost]];
+G2L["11"]["Name"] = [[Speed Boost]];
+G2L["11"]["Position"] = UDim2.new(0.17593, 0, 0.2931, 0);
 
-local function DGQAS_fake_script() -- X.Close 
-	local script = Instance.new('LocalScript', X)
 
+-- StarterGui.SABScript.GUI.Local Player.Speed Boost.Switch
+G2L["12"] = Instance.new("TextButton", G2L["e"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(157, 34, 34);
+G2L["12"]["Selectable"] = false;
+G2L["12"]["Size"] = UDim2.new(0.32028, 0, 0.60345, 0);
+G2L["12"]["ClipsDescendants"] = true;
+G2L["12"]["Text"] = [[]];
+G2L["12"]["Name"] = [[Switch]];
+G2L["12"]["Position"] = UDim2.new(0.62989, 0, 0.18966, 0);
+
+
+-- StarterGui.SABScript.GUI.Local Player.Speed Boost.Switch.UICorner
+G2L["13"] = Instance.new("UICorner", G2L["12"]);
+G2L["13"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.SABScript.GUI.Local Player.Speed Boost.Switch.Status
+G2L["14"] = Instance.new("BoolValue", G2L["12"]);
+G2L["14"]["Name"] = [[Status]];
+
+
+-- StarterGui.SABScript.GUI.Local Player.Speed Boost.Switch.State
+G2L["15"] = Instance.new("TextLabel", G2L["12"]);
+G2L["15"]["TextWrapped"] = true;
+G2L["15"]["Active"] = true;
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextSize"] = 25;
+G2L["15"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["15"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/JejuHallasan.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["BackgroundTransparency"] = 1;
+G2L["15"]["Size"] = UDim2.new(0.16666, 0, 0.82855, 0);
+G2L["15"]["Text"] = [[Off]];
+G2L["15"]["Name"] = [[State]];
+G2L["15"]["Position"] = UDim2.new(0.47222, 0, 0.17143, 0);
+
+
+-- StarterGui.SABScript.GUI.Local Player.Speed Boost.Switch.SpeedBoost
+G2L["16"] = Instance.new("LocalScript", G2L["12"]);
+G2L["16"]["Name"] = [[SpeedBoost]];
+
+
+-- StarterGui.SABScript.GUI.Home
+G2L["17"] = Instance.new("Frame", G2L["4"]);
+G2L["17"]["Active"] = true;
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
+G2L["17"]["ClipsDescendants"] = true;
+G2L["17"]["Size"] = UDim2.new(0.7862, 0, 0.85938, 0);
+G2L["17"]["Position"] = UDim2.new(0.2138, 0, 0.14063, 0);
+G2L["17"]["Name"] = [[Home]];
+
+
+-- StarterGui.SABScript.GUI.Home.Descriptions
+G2L["18"] = Instance.new("Frame", G2L["17"]);
+G2L["18"]["Active"] = true;
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["18"]["ClipsDescendants"] = true;
+G2L["18"]["Size"] = UDim2.new(0.9673, 0, 0.91688, 0);
+G2L["18"]["Position"] = UDim2.new(0.01721, 0, 0.03636, 0);
+G2L["18"]["Name"] = [[Descriptions]];
+
+
+-- StarterGui.SABScript.GUI.Home.Descriptions.UICorner
+G2L["19"] = Instance.new("UICorner", G2L["18"]);
+G2L["19"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.SABScript.GUI.Home.Descriptions.Made by MegaPuppyDoctor
+G2L["1a"] = Instance.new("TextLabel", G2L["18"]);
+G2L["1a"]["TextWrapped"] = true;
+G2L["1a"]["Active"] = true;
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["TextSize"] = 25;
+G2L["1a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1a"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/JejuHallasan.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["BackgroundTransparency"] = 1;
+G2L["1a"]["Size"] = UDim2.new(0.55338, 0, 0.06799, 0);
+G2L["1a"]["Text"] = [[Made by MegaPuppyDoctor]];
+G2L["1a"]["Name"] = [[Made by MegaPuppyDoctor]];
+G2L["1a"]["Position"] = UDim2.new(0.05338, 0, 0.08215, 0);
+
+
+-- StarterGui.SABScript.GUI.Home.Descriptions.This is still a work in progress.
+G2L["1b"] = Instance.new("TextLabel", G2L["18"]);
+G2L["1b"]["TextWrapped"] = true;
+G2L["1b"]["Active"] = true;
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["TextSize"] = 25;
+G2L["1b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1b"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/JejuHallasan.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["BackgroundTransparency"] = 1;
+G2L["1b"]["Size"] = UDim2.new(0.63879, 0, 0.06799, 0);
+G2L["1b"]["Text"] = [[This is still a work in progress.]];
+G2L["1b"]["Name"] = [[This is still a work in progress.]];
+G2L["1b"]["Position"] = UDim2.new(0.05338, 0, 0.18414, 0);
+
+
+-- StarterGui.SABScript.GUI.UIDragDetector
+G2L["1c"] = Instance.new("UIDragDetector", G2L["4"]);
+
+
+
+-- StarterGui.SABScript.GUI.CurrentTab
+G2L["1d"] = Instance.new("StringValue", G2L["4"]);
+G2L["1d"]["Name"] = [[CurrentTab]];
+G2L["1d"]["Value"] = [[Home]];
+
+
+-- StarterGui.SABScript.GUI.TableOfContents
+G2L["1e"] = Instance.new("Frame", G2L["4"]);
+G2L["1e"]["Active"] = true;
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(42, 37, 37);
+G2L["1e"]["Selectable"] = true;
+G2L["1e"]["ClipsDescendants"] = true;
+G2L["1e"]["Size"] = UDim2.new(0.2138, 0, 0.85938, 0);
+G2L["1e"]["Position"] = UDim2.new(0, 0, 0.14063, 0);
+G2L["1e"]["Name"] = [[TableOfContents]];
+G2L["1e"]["BackgroundTransparency"] = 0.2667;
+G2L["1e"]["SelectionGroup"] = true;
+
+
+-- StarterGui.SABScript.GUI.TableOfContents.Local Player
+G2L["1f"] = Instance.new("TextButton", G2L["1e"]);
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["1f"]["Selectable"] = false;
+G2L["1f"]["Size"] = UDim2.new(0.94937, 0, 0.1013, 0);
+G2L["1f"]["ClipsDescendants"] = true;
+G2L["1f"]["Text"] = [[]];
+G2L["1f"]["Name"] = [[Local Player]];
+G2L["1f"]["Position"] = UDim2.new(0.02532, 0, 0.15584, 0);
+
+
+-- StarterGui.SABScript.GUI.TableOfContents.Local Player.UICorner
+G2L["20"] = Instance.new("UICorner", G2L["1f"]);
+G2L["20"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.SABScript.GUI.TableOfContents.Local Player.Switch
+G2L["21"] = Instance.new("LocalScript", G2L["1f"]);
+G2L["21"]["Name"] = [[Switch]];
+
+
+-- StarterGui.SABScript.GUI.TableOfContents.Local Player.LocalPlayer
+G2L["22"] = Instance.new("TextLabel", G2L["1f"]);
+G2L["22"]["TextWrapped"] = true;
+G2L["22"]["Active"] = true;
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["TextSize"] = 16;
+G2L["22"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["22"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/JejuHallasan.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["22"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["BackgroundTransparency"] = 1;
+G2L["22"]["Size"] = UDim2.new(0.63333, 0, 0.41026, 0);
+G2L["22"]["Text"] = [[Local Player]];
+G2L["22"]["Name"] = [[LocalPlayer]];
+G2L["22"]["Position"] = UDim2.new(0.18, 0, 0.30769, 0);
+
+
+-- StarterGui.SABScript.GUI.TableOfContents.Home
+G2L["23"] = Instance.new("TextButton", G2L["1e"]);
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["23"]["Selectable"] = false;
+G2L["23"]["Size"] = UDim2.new(0.94937, 0, 0.1013, 0);
+G2L["23"]["ClipsDescendants"] = true;
+G2L["23"]["Text"] = [[]];
+G2L["23"]["Name"] = [[Home]];
+G2L["23"]["Position"] = UDim2.new(0, 0, 0.02597, 0);
+
+
+-- StarterGui.SABScript.GUI.TableOfContents.Home.UICorner
+G2L["24"] = Instance.new("UICorner", G2L["23"]);
+G2L["24"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.SABScript.GUI.TableOfContents.Home.Home
+G2L["25"] = Instance.new("TextLabel", G2L["23"]);
+G2L["25"]["TextWrapped"] = true;
+G2L["25"]["Active"] = true;
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["TextSize"] = 16;
+G2L["25"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["25"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/JejuHallasan.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["BackgroundTransparency"] = 1;
+G2L["25"]["Size"] = UDim2.new(0.3, 0, 0.41026, 0);
+G2L["25"]["Text"] = [[Home]];
+G2L["25"]["Name"] = [[Home]];
+G2L["25"]["Position"] = UDim2.new(0.34667, 0, 0.30769, 0);
+
+
+-- StarterGui.SABScript.GUI.TableOfContents.Home.Switch
+G2L["26"] = Instance.new("LocalScript", G2L["23"]);
+G2L["26"]["Name"] = [[Switch]];
+
+
+-- Require G2L wrapper
+local G2L_REQUIRE = require;
+local G2L_MODULES = {};
+local function require(Module:ModuleScript)
+    local ModuleState = G2L_MODULES[Module];
+    if ModuleState then
+        if not ModuleState.Required then
+            ModuleState.Required = true;
+            ModuleState.Value = ModuleState.Closure();
+        end
+        return ModuleState.Value;
+    end;
+    return G2L_REQUIRE(Module);
+end
+
+G2L_MODULES[G2L["2"]] = {
+Closure = function()
+    local script = G2L["2"];local module = {
+	
+	Colors = {
+		Off = Color3.new(0.615686, 0.129412, 0.129412),
+		On = Color3.new(0.211765, 0.615686, 0.129412)
+	}
+	
+}
+
+return module
+
+end;
+};
+-- StarterGui.SABScript.GUI.Close.X.Close
+local function C_8()
+local script = G2L["8"];
 	local button = script.Parent
 	local CloseFrame = button.Parent
 	local ui = CloseFrame.Parent
@@ -315,11 +419,11 @@ local function DGQAS_fake_script() -- X.Close
 		screen:Destroy()
 		
 	end)
-end
-coroutine.wrap(DGQAS_fake_script)()
-local function IMCY_fake_script() -- Switch.SpeedBoost 
-	local script = Instance.new('LocalScript', Switch)
-
+end;
+task.spawn(C_8);
+-- StarterGui.SABScript.GUI.Local Player.Speed Boost.Switch.SpeedBoost
+local function C_16()
+local script = G2L["16"];
 	local player = game.Players.LocalPlayer
 	local ui = player.PlayerGui.SABScript
 	local config = require(ui.Config)
@@ -350,11 +454,11 @@ local function IMCY_fake_script() -- Switch.SpeedBoost
 		
 	end)
 	
-end
-coroutine.wrap(IMCY_fake_script)()
-local function PPAAC_fake_script() -- LocalPlayer_2.Switch 
-	local script = Instance.new('LocalScript', LocalPlayer_2)
-
+end;
+task.spawn(C_16);
+-- StarterGui.SABScript.GUI.TableOfContents.Local Player.Switch
+local function C_21()
+local script = G2L["21"];
 	local player = game.Players.LocalPlayer
 	local GUI = player.PlayerGui.SABScript.GUI
 	local CurrentTab = GUI.CurrentTab
@@ -376,11 +480,11 @@ local function PPAAC_fake_script() -- LocalPlayer_2.Switch
 	
 	
 	end)
-end
-coroutine.wrap(PPAAC_fake_script)()
-local function HFUUNZ_fake_script() -- Home_2.Switch 
-	local script = Instance.new('LocalScript', Home_2)
-
+end;
+task.spawn(C_21);
+-- StarterGui.SABScript.GUI.TableOfContents.Home.Switch
+local function C_26()
+local script = G2L["26"];
 	local player = game.Players.LocalPlayer
 	local GUI = player.PlayerGui.SABScript.GUI
 	local CurrentTab = GUI.CurrentTab
@@ -402,5 +506,7 @@ local function HFUUNZ_fake_script() -- Home_2.Switch
 	
 	
 	end)
-end
-coroutine.wrap(HFUUNZ_fake_script)()
+end;
+task.spawn(C_26);
+
+return G2L["1"], require;
