@@ -302,7 +302,7 @@ Home_3.TextYAlignment = Enum.TextYAlignment.Top
 
 -- Scripts:
 
-local function TWGGGP_fake_script() -- X.Close 
+local function DGQAS_fake_script() -- X.Close 
 	local script = Instance.new('LocalScript', X)
 
 	local button = script.Parent
@@ -316,8 +316,8 @@ local function TWGGGP_fake_script() -- X.Close
 		
 	end)
 end
-coroutine.wrap(TWGGGP_fake_script)()
-local function RCVEA_fake_script() -- Switch.SpeedBoost 
+coroutine.wrap(DGQAS_fake_script)()
+local function IMCY_fake_script() -- Switch.SpeedBoost 
 	local script = Instance.new('LocalScript', Switch)
 
 	local player = game.Players.LocalPlayer
@@ -351,8 +351,8 @@ local function RCVEA_fake_script() -- Switch.SpeedBoost
 	end)
 	
 end
-coroutine.wrap(RCVEA_fake_script)()
-local function RWOVCXZ_fake_script() -- LocalPlayer_2.Switch 
+coroutine.wrap(IMCY_fake_script)()
+local function PPAAC_fake_script() -- LocalPlayer_2.Switch 
 	local script = Instance.new('LocalScript', LocalPlayer_2)
 
 	local player = game.Players.LocalPlayer
@@ -377,8 +377,8 @@ local function RWOVCXZ_fake_script() -- LocalPlayer_2.Switch
 	
 	end)
 end
-coroutine.wrap(RWOVCXZ_fake_script)()
-local function XTBBKR_fake_script() -- Home_2.Switch 
+coroutine.wrap(PPAAC_fake_script)()
+local function HFUUNZ_fake_script() -- Home_2.Switch 
 	local script = Instance.new('LocalScript', Home_2)
 
 	local player = game.Players.LocalPlayer
@@ -403,4 +403,4 @@ local function XTBBKR_fake_script() -- Home_2.Switch
 	
 	end)
 end
-coroutine.wrap(XTBBKR_fake_script)()
+coroutine.wrap(HFUUNZ_fake_script)()
